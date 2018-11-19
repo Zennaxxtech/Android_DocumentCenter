@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_upload_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@android:color/white"
+        android:scrollbars="none" />
+
+    <include layout="@layout/no_data_found" />
+
+</LinearLayout>

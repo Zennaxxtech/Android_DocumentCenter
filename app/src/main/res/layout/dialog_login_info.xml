@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/view_padding_30">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/view_padding_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_corner_light_yellow_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+
+            android:paddingBottom="-50dp">
+
+            <TextView
+                android:id="@+id/tv_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_info"
+                android:drawablePadding="@dimen/view_padding_5"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_10"
+                android:text="@string/remember_to_keep_your_devices"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/text_size_mini" />
+            <!---add your views here-->
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:clickable="true"
+            android:padding="@dimen/view_padding_5"
+            android:src="@drawable/ic_close" />
+    </FrameLayout>
+
+</LinearLayout>

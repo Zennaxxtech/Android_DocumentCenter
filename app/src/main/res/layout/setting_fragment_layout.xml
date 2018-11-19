@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:text="Wi-Fi only for attending course"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.zcw.togglebutton.ToggleButton
+                android:id="@+id/toggle_button"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="@dimen/_5sdp"
+                toggle:tbBorderWidth="1dp"
+                toggle:tbOffBorderColor="@color/light_text_color"
+                toggle:tbOffColor="#ddd"
+                toggle:tbOnColor="@color/green_notification"
+                toggle:tbSpotColor="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="Language"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_18sdp" />
+
+            <TextView
+                android:id="@+id/tv_selected_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="English"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:textColor="@color/light_text_color"
+                android:textSize="@dimen/_16sdp" />
+
+            <ImageView
+                android:id="@+id/iv_select_language"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/forward_icon"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

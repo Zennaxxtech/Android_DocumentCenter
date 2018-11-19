@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/all_screen_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/all_screen_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgv_profilepic"
+                android:layout_width="@dimen/signup_img_width_height"
+                android:layout_height="@dimen/signup_img_width_height"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/view_margin_20"
+                android:background="@drawable/squre_bg"
+                android:padding="@dimen/view_padding_20"
+                android:src="@drawable/user"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_remamber_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imgv_profilepic_remember_me"
+                    android:layout_width="@dimen/signup_img_width_height"
+                    android:layout_height="@dimen/signup_img_width_height"
+                    android:layout_marginTop="@dimen/view_margin_30"
+                    android:background="@color/profile_image_background" />
+
+                <TextView
+                    android:id="@+id/tv_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/view_margin_1"
+                    android:layout_toRightOf="@id/imgv_profilepic_remember_me"
+                    android:padding="@dimen/view_margin_10"
+                    android:text="@string/username"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_medium" />
+
+                <TextView
+                    android:id="@+id/tv_welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_user"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/tv_user"
+                    android:padding="@dimen/view_margin_10"
+                    android:text="@string/welcome_back"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_mini" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/view_margin_20"
+            android:background="@color/light_gray_in_depth"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/view_padding_35"
+            android:paddingRight="@dimen/view_padding_35"
+            android:paddingTop="@dimen/view_margin_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_gray"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tv_lbl_user"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".50"
+                    android:background="@color/light_gray_in_depth"
+                    android:gravity="center"
+                    android:padding="@dimen/view_margin_10"
+                    android:text="@string/user"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_lbl_use_touchId"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/view_margin_1"
+                    android:layout_weight=".50"
+                    android:background="@color/light_gray_in_depth"
+                    android:gravity="center"
+                    android:padding="@dimen/view_margin_10"
+                    android:text="@string/use_touch_id"
+                    android:textColor="@color/home_screen_text_color"
+                    android:textSize="@dimen/text_size_small" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/chkbox_remember_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_10"
+                android:button="@drawable/custom_checkbox"
+                android:paddingLeft="@dimen/view_padding_10"
+                android:text="@string/remember_me"
+                android:textColor="@color/textDefault"
+                android:textSize="@dimen/text_size_mini"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/chkbox_fingrprint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_10"
+                android:button="@drawable/custom_checkbox"
+                android:paddingLeft="@dimen/view_padding_10"
+                android:text="@string/when_touch_id_is_enable"
+                android:textColor="@color/colorText"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_20"
+                android:background="@drawable/drawable_edit_box_multiline"
+                android:drawableLeft="@drawable/ic_username"
+                android:drawablePadding="@dimen/view_padding_5"
+                android:hint="@string/username"
+                android:imeOptions="actionNext"
+                android:padding="@dimen/view_padding_8"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/text_size_small" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_10"
+                android:background="@drawable/drawable_edit_box_multiline"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="@dimen/view_padding_5"
+                android:ellipsize="end"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="@dimen/view_padding_8"
+                android:scrollHorizontally="true"
+                android:textColorHint="@color/hint_text_color"
+                android:textSize="@dimen/text_size_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_forgot_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/view_margin_8"
+                    android:paddingBottom="@dimen/view_padding_5"
+                    android:paddingTop="@dimen/view_padding_5"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/text_size_mini" />
+
+                <TextView
+                    android:id="@+id/tv_switch_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/view_margin_8"
+                    android:paddingBottom="@dimen/view_padding_5"
+                    android:paddingTop="@dimen/view_padding_5"
+                    android:text="@string/switch_user"
+                    android:textColor="@color/color_primary"
+                    android:textSize="@dimen/text_size_mini"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_20"
+                android:background="@drawable/rounded_corner_yellow_bg"
+                android:gravity="center"
+                android:padding="@dimen/view_padding_8"
+                android:text="@string/signin"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_version_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/view_padding_30"
+                android:paddingTop="@dimen/view_padding_5"
+                android:text="@string/version"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/text_size_mini" />
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/bottom_dialog"
+            layout="@layout/dialog_login_info"
+            android:visibility="visible" />
+    </LinearLayout>
+</ScrollView>
