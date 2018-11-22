@@ -43,4 +43,5 @@
     <string name="download_speed_kb">%1$s KB/s</string>
     <string name="percent_progress">%1$d%%</string>
     <string name="download_speed_mb">%1$s MB/s</string>
+    <string name="test">Test</string>
 </resources>
